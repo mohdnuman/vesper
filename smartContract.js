@@ -23,7 +23,8 @@ async function getBalance(address, contract) {
 
   const balance = (stake / 10 ** decimals).toFixed(2);
 
-  if (balance != 0) console.log("balance:", balance, symbol.slice(1));
+  if(contract==="0xbA4cFE5741b357FA371b506e5db0774aBFeCf8Fc")console.log("balance:", (balance*1.6).toFixed(2), symbol.slice(1));
+  else if (balance != 0) console.log("balance:", balance, symbol.slice(1));
 }
 async function getBalance2(address, contract) {
   const Instance = new web3.eth.Contract(Abi2, contract);
@@ -50,7 +51,7 @@ async function getBalance2(address, contract) {
   }
 }
 
-let address = "0x6c5384bbae7af65ed1b6784213a81dae18e528b2";
+let address = "0xdbc13e67f678cc00591920cece4dca6322a79ac7";
 let VesperContracts = [
   "0x103cc17C2B1586e5Cd9BaD308690bCd0BBe54D5e",
   "0x4B2e76EbBc9f2923d83F5FBDe695D8733db1a17B",
